@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BABYYBOSSSSSS</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
+        <link rel="stylesheet" href="dist/output.css">
+        <link rel="stylesheet" href="index.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@500&family=Poppins&family=Roboto:wght@500&family=Rubik+Bubbles&family=Rubik+Doodle+Shadow&family=Tomorrow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap">
+
+        <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+        <link rel="icon" href="image/BabyBos.jpg" type="image/x.icon">
+    </head>
+
+    <body class="font-Montserrat bg-black">
+        <nav class="nav-main">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="image/BabyyBossssss.png" alt="etf" class="image 3dh-12 rounded-full md:h-14">
+                    <span class="md:hidden lg:block text-lg md:text-3xl font-extrabold whitespace-nowrap text-blue-500" style="background-image: linear-gradient(to right, rgb(41, 144, 255), rgb(79, 255, 129));color: transparent;-webkit-background-clip: text; /* For Safari and older versions of Chrome */background-clip: text;">BABYYBOSSSSSS</span>
+                </a>
+                <button data-collapse-toggle="navbar-default" type="button" style="color: cyan;" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-sm md:hidden hover:bg-cyan-500" aria-controls="navbar-default" aria-expanded="false" onclick="toggleMenu()">
+                    <span class="sr-only">Open Main Menu</span>
+                    <span id="menuIcon" class="menu-icon">
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </span>
+                </button>
+                <div class="w-full md:block md:w-auto hidden" id="navbar-default">
+                    <ul
+                    class="font-medium flex flex-col  p-4 md:p-0 mt-4 border rounded-sm md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+                    <li>
+                        <a href="#"
+                            class="violet block py-2 px-3 text-white text-lg lg:text-xl rounded hover:text-pink-500 md:hover:bg-transparent md:border-0 md:hover:text-pink-500 md:p-0"
+                            aria-current="page"><i class="bx bx-coin"></i> HOME</a>
+                    </li>
+                    <li>
+                        <a href="#about"
+                            class="violet block py-2 px-3 text-white text-lg lg:text-xl rounded hover:text-pink-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0"
+                            aria-current="page"><i class="bx bx-coin"></i> ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="#tokenomics"
+                            class="violet block py-2 px-3 text-white text-lg lg:text-xl rounded hover:text-pink-500 md:hover:bg-transparent md:border-0 md:hover:text-yellow-500 md:p-0"
+                            aria-current="page"><i class="bx bx-coin"></i> TOKENOMICS</a>
+                    </li>
+                    <li>
+                        <a href="#partners"
+                            class="violet block py-2 px-3 text-white text-lg lg:text-xl rounded hover:text-pink-500 md:hover:bg-transparent md:border-0 md:hover:text-gray-500 md:p-0  ">
+                            <i class="bx bx-map-alt"></i> CRYPTO</a>
+                    </li>
+                    <li>
+                        <a href="#social"
+                            class="violet block py-2 px-3 text-white text-lg lg:text-xl rounded hover:text-pink-500 md:hover:bg-transparent md:border-0 md:hover:text-purple-500 md:p-0  ">
+                            <i class="bx bx-message-dots"></i> SOCIALS</a>
+                    </li>
+                </ul>
+                </div>
+
+                <div class="my-2 md:block md:w-auto hidden" id="navbar-default-btn">
+                    <a href="https://t.me/DSBabyyBossssss" class="">
+                        <button type="button"
+                            class="text-white bg-black hover:bg-white hover:text-black border border-white focus:outline-none focus:ring-4 focus:ring-white font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 ">
+                            Join Community
+                        </button>
+                    </a>
+                </div>
+                </div>          
+            </div>     
+        </nav>
+        <div id="time-container" class="fixed top-0 right-0 p-2 bg-black text-white text-sm md:text-lg rounded-bl-lg shadow-lg">
+            <span id="current-time"></span>
+        </div>
+        <script>
+            function updateTime() {
+                const now = new Date();
+                const hours = now.getHours().toString().padStart(2, '0');
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                const seconds = now.getSeconds().toString().padStart(2, '0');
+                document.getElementById('current-time').textContent = `${hours}:${minutes}:${seconds}`;
+            }
+        
+            // Update the time immediately and set an interval to update every second
+            updateTime();
+            setInterval(updateTime, 1000);
+        </script>
+        
+        <style>
+            #time-container {
+                z-index: 1000; /* Ensure it stays above other elements */
+            }
+        </style>
+
+        <section
+        class="flex flex-wrap justify-center items-center relative text-white text-center py-10 bg-cover bg-center">
+        <div
+            class="container min-w-fit hero relative z-10 lg:h-screen flex justify-center flex-col-reverse md:flex-row lg:flex-row items-center mx-5 lg:mx-10 ">
+            <div
+                class="main-head text-white w-full m-0 md:m-10 lg:m-0 md:w-1/3 lg:w-1/2 flex flex-col justify-center items-center gap-10">
+
+                <h1 class="text-3xl text-center lg:text-5xl font-extrabold break-words lg:px-4 mt-6 lg:mt-0">Welcome to
+                    <br>
+                    <span class="text-center text-4xl lg:text-7xl text-cyan-500 glow-text" style="background-image: linear-gradient(to right, rgb(248, 255, 52), rgb(246, 103, 248));
+                    color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;">BABYYBOSSSSSS</span>
+                </h1>
+                <a href="https://indodax.com/trade/BTCIDR"
+                    class="w-full md:w-1/2 lg:w-1/2">
+                    <button type="button"
+                        class="text-white flex justify-center gap-x-2 items-center  w-full bg-black hover:bg-white hover:text-black border border-white focus:outline-none focus:ring-4 focus:ring-white font-medium rounded-full text-lg px-5 py-2.5 me-2 mb-2 ">
+                        BUY BITCOIN
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"
+                            class="svgg">
+                            <path
+                                d="M6.25 5.44702C5.56 5.44702 5 6.00702 5 6.69702V18.197C5 18.887 5.56 19.447 6.25 19.447H17.75C18.44 19.447 19 18.887 19 18.197V14.447C19 14.1818 19.1054 13.9275 19.2929 13.7399C19.4804 13.5524 19.7348 13.447 20 13.447C20.2652 13.447 20.5196 13.5524 20.7071 13.7399C20.8946 13.9275 21 14.1818 21 14.447V18.197C21 19.059 20.6576 19.8856 20.0481 20.4951C19.4386 21.1046 18.612 21.447 17.75 21.447H6.25C5.38805 21.447 4.5614 21.1046 3.9519 20.4951C3.34241 19.8856 3 19.059 3 18.197V6.69702C3 5.83507 3.34241 5.00842 3.9519 4.39892C4.5614 3.78943 5.38805 3.44702 6.25 3.44702H10C10.2652 3.44702 10.5196 3.55238 10.7071 3.73991C10.8946 3.92745 11 4.18181 11 4.44702C11 4.71224 10.8946 4.96659 10.7071 5.15413C10.5196 5.34166 10.2652 5.44702 10 5.44702H6.25ZM14 5.44702C13.7348 5.44702 13.4804 5.34166 13.2929 5.15413C13.1054 4.96659 13 4.71224 13 4.44702C13 4.18181 13.1054 3.92745 13.2929 3.73991C13.4804 3.55238 13.7348 3.44702 14 3.44702H20C20.2652 3.44702 20.5196 3.55238 20.7071 3.73991C20.8946 3.92745 21 4.18181 21 4.44702V10.447C21 10.7122 20.8946 10.9666 20.7071 11.1541C20.5196 11.3417 20.2652 11.447 20 11.447C19.7348 11.447 19.4804 11.3417 19.2929 11.1541C19.1054 10.9666 19 10.7122 19 10.447V6.86102L14.707 11.154C14.5184 11.3362 14.2658 11.437 14.0036 11.4347C13.7414 11.4324 13.4906 11.3272 13.3052 11.1418C13.1198 10.9564 13.0146 10.7056 13.0123 10.4434C13.01 10.1812 13.1108 9.92862 13.293 9.74002L17.586 5.44702H14Z"
+                                fill="#ffffff"></path>
+                        </svg>
+                    </button>
+                </a>
+
+                <div class="flex justify-center items-center gap-x-3 mx-auto w-full mt-20">
+                    <p class="text-white bg-gray-900 border-gray-700 border p-3 rounded-lg w-1/2 md:w-1/2 text-center" 
+                       id="hs-clipboard-input">
+                        EXCHANGE CRYPTO INDONESIA
+                    </p>
+                </div>
+                
+
+            <div class="grid grid-cols-3 gap-6">
+                <a href="https://indodax.com/ref/febriansyah29/1">
+                    <img src="image/INDODAX.png" alt="INDODAX" style="width: 200px; height: auto;">
+                </a>
+                <a href="https://www.tokocrypto.com/account/signup?ref=A91G2DY7">
+                    <img src="image/Tokocrypto.png" alt="TOKOCRYPTO" style="width: 200px; height: auto;">
+                </a>
+                <a href="https://kripto.ajaib.co.id/">
+                    <img src="image/Ajaib Kripto.png" alt="AJAIB KRIPTO" style="width: 600px; height: auto;">
+                </a>
+                <a href="https://pluang.com/">
+                    <img src="image/Pluang.png" alt="PLUANG" style="width: 300px; height: auto;">
+                </a>
+                <a href="https://pintu.co.id/pro?utm_source=google&utm_medium=cpc&utm_campaign=traffictowebprodekstop&gad_source=1&gclid=EAIaIQobChMIqpK518iCigMVs5VLBR0hIRdSEAAYASAAEgITAfD_BwE">
+                    <img src="image/Pintu.png" alt="PINTU" style="width: 200px; height: auto;">
+                </a>
+                <a href="https://triv.co.id/id">
+                    <img src="image/Triv.png" alt="TRIV" style="width: 170px; height: auto;">
+                </a>
+            </div>
+
+            </div>
+
+            <div class="main-logo  w-70 md:86 lg:w-1/2 ">
+                <img class="imglogo" src="image/BabyyBossssss.png" alt="Animated etf logo">
+            </div>
+            <script>
+                const imgLogo = document.querySelector('.imglogo');
+              
+                imgLogo.addEventListener('mousemove', (e) => {
+                  const rect = imgLogo.getBoundingClientRect();
+                  const x = e.clientX - rect.left;
+                  const y = e.clientY - rect.top;
+                  imgLogo.style.transform = `scale(1.1) rotate(3deg) translate(${x * 0.05}px, ${y * 0.05}px)`;
+                });
+              
+                imgLogo.addEventListener('mouseleave', () => {
+                  imgLogo.style.transform = 'scale(1) rotate(0) translate(0, 0)';
+                });
+              </script>
+        </div>
+
+            <div class="w-full flex justify-center mt-5">
+                <button type="button"
+                    class="btn-buy flex flex-wrap justify-center h-16 w-64 md:w-96 items-center transform rounded-full hover:scale-x-110 hover:scale-y-110 transition duration-300 ease-out">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        style="fill: rgba(255, 255, 255, 1)">
+                        <path d="M3 3v17a1 1 0 0 0 1 1h17v-2H5V3H3z"></path>
+                        <path
+                            d="M15.293 14.707a.999.999 0 0 0 1.414 0l5-5-1.414-1.414L16 12.586l-2.293-2.293a.999.999 0 0 0-1.414 0l-5 5 1.414 1.414L13 12.414l2.293 2.293z">
+                        </path>
+                    </svg>
+                    <a href="BabyyBossssssChart.html"
+                        class="text-white text-xl font-extrabold mx-5 ">
+                        CHART VIEW</a>
+                </button>
+            </div>
+            <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text"></span></a></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                    {
+                    "symbol": "BINANCE:BTCUSDT",
+                    "width": "750",
+                    "height": "420",
+                    "locale": "en",
+                    "dateRange": "12M",
+                    "colorTheme": "dark",
+                    "isTransparent": true,
+                    "autosize": false,
+                    "largeChartUrl": "",
+                    "noTimeScale": false
+                }
+                    </script>
+                </div>
+  <!-- TradingView Widget END -->
+  <div class="flex justify-center items-center gap-x-3 mx-auto w-full mt-10">
+    <a href="top10crypto.html" class="text-white bg-gray-800 border-green-600 border p-3 rounded-lg w-1/4 md:w-1/4 text-center">
+        TOP 10 KOIN CRYPTO
+    </a>
+</div>  
+        </div>
+
+    </section>
+
+    <section id="about" class="shadow-2xl py-16">
+        <div class="flex flex-col items-center justify-center mx-5 lg:mx-20 gap-5">
+            <p class="text-4xl lg:text-5xl font-extrabold text-center text-white">ABOUT</p>
+            <div class="hero lg:h-screen flex flex-col justify-between lg:flex-row items-center mx-5 lg:mx-10">
+                <div class="main-logo about-logo w-fill lg:w-1/3 rounded-full mt-20">
+                    <img src="image/Djarum Slayer.jpg" alt="Animated"/>
+                </div>
+                <div class="main-head text-white w-full lg:w-1/2 flex flex-col">
+                    <p
+                        class="about-context about-text text-gray-300 mx-2 md:mx-12 text-left md:text-left md:text-xl lg:text-2xl mt-5">
+                        I'm Djarum Slayer, This website serves as a platform to introduce and connect the cryptocurrency community in Indonesia to the wider public. 
+                        We believe that cryptocurrency and blockchain technology have great potential to transform the way we interact with the digital world. Our goal is to build a strong community, 
+                        share knowledge, and promote the wider adoption of crypto in Indonesia.
+                    </p>
+                    <p
+                        class="about-context about-text text-gray-300 mx-2 md:mx-12 text-left md:text-left md:text-xl lg:text-2xl mt-5">
+                        Our vision is to introduce the largest cryptocurrency community in Indonesia, one that can educate,
+                        motivate, and inspire more people to engage in the blockchain and cryptocurrency ecosystem. 
+                        By sharing knowledge and information, we aim to bring about positive change and support the growth of crypto in Indonesia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="tokenomics" class=" text-white py-16">
+        <div class="container mx-auto text-center">
+            <div class="token1 flex flex-col-reverse md:flex-row md:items-center justify-start mx-4 md:mx-6 lg:mx-8">
+                <h1 class="token text-5xl lg:text-7xl font-extrabold mb-8 text-white ">TOKENOMICS</h1>
+                <img class="w-20 md:w-10 lg:w-32 px-5" src="image/bitcoin.png" alt="">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 m-10 align-middle ">
+                <div class="token1 p-6 border-4 border-white rounded-lg shadow-2xl">
+                    <h1 class="text-3xl font-bold mb-4 text-white">Total Supply</h1>
+                    <p class="tok pt-5 text-5xl font-extrabold text-yellow-300">21.000.000</p>
+                </div>
+                <div class="token2 p-6 border-4 border-white rounded-lg shadow-md">
+                    <h1 class="text-3xl font-bold mb-4 text-white">Circulating</h1>
+                    <p id="circulating-supply" class="tok pt-5 text-5xl font-extrabold text-yellow-300">Loading...</p>
+                </div>
+                
+                <script>
+                    // Fungsi untuk mengambil circulating supply dari API
+                    function getCirculatingSupply() {
+                        fetch('https://api.coingecko.com/api/v3/coins/bitcoin')
+                            .then(response => response.json())
+                            .then(data => {
+                                const circulatingSupply = data.market_data.circulating_supply;
+                                // Perbarui teks dalam elemen dengan ID 'circulating-supply'
+                                document.getElementById('circulating-supply').innerText = circulatingSupply;
+                            })
+                            .catch(error => {
+                                console.error('Error fetching data:', error);
+                                // Tampilkan pesan error jika ada masalah
+                                document.getElementById('circulating-supply').innerText = 'Error fetching data';
+                            });
+                    }
+                
+                    // Panggil fungsi untuk mendapatkan data pertama kali
+                    getCirculatingSupply();
+                
+                    // Memperbarui data setiap 60 detik (60000 ms)
+                    setInterval(getCirculatingSupply, 60000);
+                </script>                
+                <!-- addd -->
+                <div class="token3 p-6 border-4 border-white rounded-lg shadow-md">
+                    <h1 class="text-3xl font-bold mb-4 text-white">BY DATA</h1>
+                
+                    <div class="flex justify-center items-center w-full gap-x-3">
+                        <a href="https://www.coingecko.com/id/koin_koin/bitcoin" 
+                           target="_blank" 
+                           class="tok pt-5 text-5xl font-extrabold text-green-300">
+                           COINGECKO
+                        </a>
+                    </div>
+                </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="partners">
+        <div class="container mx-auto text-center p-5 lg:pb-20">
+            <div
+                class="token1 flex flex-col-reverse md:flex-row items-center justify-center lg:justify-start mx-4 md:mx-6 lg:mx-8">
+                <h1 class="token text-5xl lg:text-7xl font-extrabold mb-8 text-white ">CRYPTO HOLD</h1>
+                <img class="w-32 md:w-42 lg:w-64 px-5" src="images/partner.png" alt="">
+            </div>
+
+            <div
+                class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto">
+
+                <a href="https://bitcoin.org/id/">
+                    <div
+                        class="token1 w-64 h-64 flex items-center lg:w-1/3 mx-4 md:mx-6 lg:mx-8 mb-8 transform hover:scale-110 transition duration-200">
+                    <div
+                        class="flex flex-col justify-center items-center rounded-lg m-4 lg:m-10 p-10 transform hover:scale-110 transition duration-200">
+                        <div class="flex justify-center items-center">
+                            <img class="w-32 lg:w-64" src="" alt="">
+                        </div>
+                            <div class="flex justify-center items-center">
+                                <img src="image/bitcoin.png" alt="Coingecko" class="w-30 h-30 lg:w-48 lg:h-48 mx-auto">
+                            </div>
+                    </div>
+                    
+                    </div>
+                </a>
+
+                <a href="https://polygon.technology/">
+                    <div
+                        class="token1 w-64 h-64 flex items-center lg:w-1/3 mx-4 md:mx-6 lg:mx-8 mb-8 transform hover:scale-110 transition duration-200">
+                    <div
+                        class="flex flex-col justify-center items-center rounded-lg m-4 lg:m-10 p-10 transform hover:scale-110 transition duration-200">
+                        <div class="flex justify-center items-center">
+                            <img class="w-32 lg:w-64" src="" alt="">
+                        </div>
+                            <div class="flex justify-center items-center">
+                                <img src="image/$POL.png" alt="BabyyBossssss" class="w-30 h-30 lg:w-48 lg:h-48 mx-auto">
+                            </div>
+                    </div>
+                    </div>
+                </a>
+
+                <a href="https://manta.network/">
+                    <div
+                        class="token1 w-64 h-64 flex items-center lg:w-1/3 mx-4 md:mx-6 lg:mx-8 mb-8 transform hover:scale-110 transition duration-200">
+                    <div
+                        class="flex flex-col justify-center items-center rounded-lg m-4 lg:m-10 p-10 transform hover:scale-110 transition duration-200">
+                        <div class="flex justify-center items-center">
+                            <img class="w-32 lg:w-64" src="" alt="">
+                        </div>
+                            <div class="flex justify-center items-center">
+                                <img src="image/$MANTA.png" alt="$MANTA" class="w-48 h-48 lg:w-50 lg:h-50 mx-auto">
+                            </div>
+                    </div>
+                    </div>
+                </a>
+
+                <a href="https://ton.org/id/toncoin">
+                    <div
+                        class="token1 w-64 h-64 flex items-center lg:w-1/3 mx-4 md:mx-6 lg:mx-8 mb-8 transform hover:scale-110 transition duration-200">
+                    <div
+                        class="flex flex-col justify-center items-center rounded-lg m-4 lg:m-10 p-10 transform hover:scale-110 transition duration-200">
+                        <div class="flex justify-center items-center">
+                            <img class="w-32 lg:w-64" src="" alt="">
+                        </div>
+                            <div class="flex justify-center items-center">
+                                <img src="image/$TON.png" alt="$TON" class="w-48 h-48 lg:w-50 lg:h-50 mx-auto">
+                            </div>
+                    </div>
+                    </div>
+                </a>
+
+                <!-- <a href="https://coingecko.com/">
+                    <div
+                        class="token1 w-64 h-64 flex items-center lg:w-1/3 mx-4 md:mx-6 lg:mx-8 mb-8 transform hover:scale-110 transition duration-200">
+                    <div
+                        class="flex flex-col justify-center items-center rounded-lg m-4 lg:m-10 p-10 transform hover:scale-110 transition duration-200">
+                        <div class="flex justify-center items-center">
+                            <img class="w-32 lg:w-64" src="" alt="">
+                        </div>
+                            <div class="flex justify-center items-center">
+                                <img src="image/Coingecko.png" alt="$POL" class="w-48 h-48 lg:w-50 lg:h-50 mx-auto">
+                            </div>
+                    </div>
+                    </div>
+                </a> -->
+
+                <!-- <a href="https://dexscreener.com/">
+                    <div
+                        class="token1 w-64 h-64 flex items-center lg:w-1/3 mx-4 md:mx-6 lg:mx-8 mb-8 transform hover:scale-110 transition duration-200">
+                    <div
+                        class="flex flex-col justify-center items-center rounded-lg m-4 lg:m-10 p-10 transform hover:scale-110 transition duration-200">
+                        <div class="flex justify-center items-center">
+                            <img class="w-32 lg:w-64" src="" alt="">
+                        </div>
+                            <div class="flex justify-center items-center">
+                                <img src="image/DEX Screener.png" alt="DEX Sceener" class="w-48 h-48 lg:w-50 lg:h-50 mx-auto">
+                            </div>
+                    </div>
+                    </div>
+                </a> -->
+
+                <!-- <a href="https://indodax.com/">
+                    <div
+                        class="token1 w-64 h-64 flex items-center lg:w-1/3 mx-4 md:mx-6 lg:mx-8 mb-8 transform hover:scale-110 transition duration-200">
+                    <div
+                        class="flex flex-col justify-center items-center rounded-lg m-4 lg:m-10 p-10 transform hover:scale-110 transition duration-200">
+                        <div class="flex justify-center items-center">
+                            <img class="w-32 lg:w-64" src="" alt="">
+                        </div>
+                            <div class="flex justify-center items-center">
+                                <img src="image/INDODAX.png" alt="INDODAX" class="w-30 h-70 lg:w-50 lg:h-50 mx-auto">
+                            </div>
+                    </div>
+                    </div>
+                </a> -->
+
+                <!-- <a href="https://akademicrypto.com/">
+                    <div
+                        class="token1 w-64 h-64 flex items-center lg:w-1/3 mx-4 md:mx-6 lg:mx-8 mb-8 transform hover:scale-110 transition duration-200">
+                    <div
+                        class="flex flex-col justify-center items-center rounded-lg m-4 lg:m-10 p-10 transform hover:scale-110 transition duration-200">
+                        <div class="flex justify-center items-center">
+                            <img class="w-32 lg:w-64" src="" alt="">
+                        </div>
+                            <div class="flex justify-center items-center">
+                                <img src="image/Akademi Crypto.jpg" alt="Akademi Crypto" class="w-30 h-70 lg:w-50 lg:h-50 mx-auto">
+                            </div>
+                    </div>
+                    </div>
+                </a> -->
+
+            </div>
+        </div>
+    </section>
+
+    <section id="social">
+        <div class="flex flex-col-reverse items-center md:flex-row justify-between gap-5 ">
+            <div class="social w-full md:w-1/2 mx-4 px-4 flex justify-center items-center">
+                <img class="w-80 md:96 lg:w-[1000px] mx-8" src="image/BabyyBossssss.png" alt="">
+            </div>
+
+            <div class="social w-full md:w-1/2 mx-4 px-4">
+                <h1 class="text-center md:text-left text-3xl lg:text-5xl font-extrabold mb-8 text-white ">Follow
+                    Djarum Slayer</h1>
+                <div class="flex items-center justify-center md:justify-start gap-4 ">
+                    <a href="https://t.me/DSBabyyBossssss">
+                        <img class="w-40 transform hover:scale-110 transition duration-200" src="image/Telegram.png"
+                            alt="">
+                    </a>
+                    <a href="https://x.com/BabyyBossssss">
+                        <img class="w-24 transform hover:scale-110 transition duration-200" src="image/X.png"
+                            alt="">
+                    </a>
+                    <a href="">
+                        <img class="w-20 transform hover:scale-110 transition duration-200"
+                            src="image/Discord.png" alt="">
+                    </a>
+                    <a href="https://github.com/FebriOsht">
+                        <img class="w-20 transform hover:scale-110 transition duration-200"
+                            src="image/github (1).png" alt="">
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-4 text-center mt-10">
+        <div class="container mx-auto">
+            <!-- Disclaimer, social media icons, copyright here -->
+            <p class="text-sm text-white">Copyright Djarum Slayer © 2024. All rights reserved</p>
+        </div>
+    </footer>
+
+</body>
+
+<script>
+
+    ScrollReveal().reveal(".social", { delay: 100, reset: true, origin: 'right', distance: '20px', duration: 300 });
+
+    ScrollReveal().reveal(".token3", { delay: 100, reset: true, origin: 'right', distance: '500px', duration: 500 });
+    ScrollReveal().reveal(".token2", { delay: 100, reset: true, origin: 'right', distance: '500px', duration: 500 });
+    ScrollReveal().reveal(".token1", { delay: 100, reset: true, origin: 'right', distance: '500px', duration: 500 });
+
+    ScrollReveal().reveal(".chart", { delay: 100, reset: true, origin: 'bottom', distance: '500px', duration: 300 });
+    ScrollReveal().reveal(".main-head", { delay: 100, reset: true, origin: 'left', distance: '500px', duration: 300 });
+    ScrollReveal().reveal(".main-logo", { delay: 100, reset: true, origin: 'right', distance: '500px', duration: 300 });
+    ScrollReveal().reveal(".nav-main", { delay: 100, reset: true, origin: 'top', distance: '20px', duration: 300 });
+
+    // button menu nav
+    function toggleMenu() {
+        var icon = document.getElementById("menuIcon");
+        var navbar = document.getElementById("navbar-default");
+
+        if (navbar.style.display === 'none' || navbar.style.display === '') {
+            icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: cyan;"><path d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z"></path></svg>';
+            navbar.style.display = 'block';
+        } else {
+            icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: cyan;"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>';
+            navbar.style.display = 'none';
+        }
+    }
+
+    function changeCopyText(button) {
+        var copyTextElement = button.querySelector('.copy-text');
+        if (copyTextElement) {
+            copyTextElement.textContent = 'copied';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var clipboard = new ClipboardJS('.js-clipboard');
+    });
+
+
+    const menuIcon = document.querySelector('#menu-icon');
+    const navbar = document.querySelector('.navbar');
+    const navbg = document.querySelector('.nav-bg');
+    menuIcon.addEventListener('click', () => {
+        menuIcon.classList.toggle('bx-x');
+        navbar.classList.toggle('active');
+        navbg.classList.toggle('active');
+    });
+</script>
+
+            </div>
+        </nav>
+    </body>
+</html>
